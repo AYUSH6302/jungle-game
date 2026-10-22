@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jungle Dash — Endless Runner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">✦</span><span>JUNGLE <b>DASH</b></span></div>
+      <div class="best">BEST <strong id="bestScore">0</strong></div>
+    </header>
+
+    <section class="game-card" aria-label="Jungle Dash game">
+      <canvas id="gameCanvas" width="900" height="600" aria-label="Game canvas"></canvas>
+
+      <div class="hud">
+        <div class="hud-box"><small>SCORE</small><strong id="score">00000</strong></div>
+        <div class="hud-box coins-box"><span>●</span><div><small>COINS</small><strong id="coins">0</strong></div></div>
+        <div class="hud-box"><small>SPEED</small><strong id="speed">1.0×</strong></div>
+      </div>
+
+      <div class="overlay" id="startOverlay">
+        <div class="eyebrow">THE JUNGLE IS CALLING</div>
+        <h1>RUN <em>WILD.</em></h1>
+        <p>Dodge the obstacles. Grab the coins.<br />How far can you make it?</p>
+        <button id="startBtn" class="primary-btn">START RUNNING <span>→</span></button>
+        <div class="hint">← → MOVE <i>•</i> ↑ JUMP <i>•</i> ↓ SLIDE</div>
+      </div>
+
+      <div class="overlay hidden" id="gameOverOverlay">
+        <div class="eyebrow">RUN COMPLETE</div>
+        <h1>WIPEOUT<span>!</span></h1>
+        <p>You ran <strong id="finalScore">0</strong> points and collected <strong id="finalCoins">0</strong> coins.</p>
+        <button id="restartBtn" class="primary-btn">RUN IT BACK <span>↻</span></button>
+        <div class="hint">TIP: CHANGE LANES EARLY TO AVOID TROUBLE</div>
+      </div>
+
+      <div class="toast hidden" id="toast">+1 COIN</div>
+    </section>
+
+    <section class="controls">
+      <div><span class="keycap">←</span><span class="keycap">→</span><p>CHANGE LANE</p></div>
+      <div><span class="keycap">↑</span><p>JUMP OVER</p></div>
+      <div><span class="keycap">↓</span><p>SLIDE UNDER</p></div>
+      <div class="mobile-note">On mobile: swipe left, right, up, or down.</div>
+    </section>
+    <footer>AN ORIGINAL ENDLESS RUNNER • MADE WITH HTML, CSS & JAVASCRIPT</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
